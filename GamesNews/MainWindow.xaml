@@ -1,0 +1,25 @@
+﻿<Window x:Class="GamesNews.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GamesNews"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="Black">
+        <DataGrid Name="gridList" HorizontalAlignment="Left" Height="378" Margin="0,41,0,0" VerticalAlignment="Top" Width="792" Background="Silver">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="Image" Width="150" IsReadOnly="True">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding ImageSources}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Загрузить" HorizontalAlignment="Left" Margin="60,10,0,0" VerticalAlignment="Top" Width="209" Click="Button_Click" />
+        <Button Content="Обновить" HorizontalAlignment="Left" Margin="517,10,0,0" VerticalAlignment="Top" Width="209" Click="Button_Click_1"/>
+
+    </Grid>
+</Window>
